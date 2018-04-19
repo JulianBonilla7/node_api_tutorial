@@ -6,6 +6,15 @@
 * Node.js (> 7.6)
 * MongoDB (> 3.2)
 
+## Configuración
+
+* Clonar este repositorio: `git@github.com:JulianBonilla7/node_api_tutorial.git`
+* Navegar a la carpeta del repositorio: `cd node_api_tutorial`
+* Instalar dependencias: `npm install`
+* Crear archivo de variables de entorno `.env` (ver `.env.sample` para un ejemplo), y configurar allí la base de datos y el puerto a usar.
+* Asegurarse que MongoDB está activo y corriendo, e iniciar la aplicación con `npm start`
+* Usar `npm test` para pruebas. (*pendiente*) 
+
 ## Modelo de usuario
 
 El modelo usuario contiene estos atributos, más el `_id` generado por MongoDB como identificador.
