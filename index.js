@@ -9,11 +9,11 @@ const port = process.env.PORT || 3000;
 mongoose.connect(process.env.DATABASE);
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
-  console.error(err.message});
+  console.error(err.message);
 });
 
 // Import all models
-const Task = require('./api/models/User');
+const User = require('./models/User');
 
 // Start our app!
 const app = require('./app');

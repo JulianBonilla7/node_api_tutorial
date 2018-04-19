@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./api/routes/index');
-const errorHandlers = require('./api/handlers/errorHandlers');
+const routes = require('./routes/index');
+const errorHandlers = require('./handlers/errorHandlers');
 
 // create our Express app
 const app = express();
@@ -12,8 +12,9 @@ app.use(bodyParser.json());
 
 app.use('/', routes);
 
+// Error middlewares
 app.use(errorHandlers.notFound);
-// app.use(errorHandlers.serverError);
+app.use(errorHandlers.getErrors);
 
 // done! we export it so we can start the site in index.js
 module.exports = app;
